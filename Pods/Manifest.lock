@@ -1,0 +1,20 @@
+PODS:
+  - Cosmos (18.0.1)
+  - Kingfisher (4.10.1)
+
+DEPENDENCIES:
+  - Cosmos (= 18.0.1)
+  - Kingfisher (= 4.10.1)
+
+SPEC REPOS:
+  trunk:
+    - Cosmos
+    - Kingfisher
+
+SPEC CHECKSUMS:
+  Cosmos: 7dfaa3f52584ca5f94ab74b5c2e264019cc9f7f5
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+
+PODFILE CHECKSUM: 2e021f3d92888acab29dd3bc7fe18f62f4d5c5d3
+
+COCOAPODS: 1.11.3
