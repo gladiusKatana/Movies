@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -23,36 +22,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iaO-Qr-X8q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-687" y="27"/>
-        </scene>
-        <!--Menu View Controller-->
-        <scene sceneID="wHG-c6-hmj">
-            <objects>
-                <viewController storyboardIdentifier="MenuViewController" id="YgF-61-sSL" customClass="MenuViewController" customModule="TMDB_demo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ebM-f7-zvm">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="P4N-at-Eqd">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
-                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="bNz-JB-Kf7"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="bNz-JB-Kf7" firstAttribute="bottom" secondItem="P4N-at-Eqd" secondAttribute="bottom" id="4MR-Yu-oVK"/>
-                            <constraint firstItem="P4N-at-Eqd" firstAttribute="leading" secondItem="bNz-JB-Kf7" secondAttribute="leading" id="Fi9-z9-cj9"/>
-                            <constraint firstItem="bNz-JB-Kf7" firstAttribute="trailing" secondItem="P4N-at-Eqd" secondAttribute="trailing" id="PGE-vM-CfQ"/>
-                            <constraint firstItem="P4N-at-Eqd" firstAttribute="top" secondItem="bNz-JB-Kf7" secondAttribute="top" id="jOv-KR-SxA"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="tableView" destination="P4N-at-Eqd" id="y7d-gh-xI8"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="egu-Ww-kNB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1540" y="-756"/>
         </scene>
         <!--Movie List View Controller-->
         <scene sceneID="vNV-XI-XwJ">
@@ -233,73 +202,5 @@
             </objects>
             <point key="canvasLocation" x="765.60000000000002" y="40.479760119940032"/>
         </scene>
-        <!--Cast-->
-        <scene sceneID="ol5-2Y-48W">
-            <objects>
-                <viewController storyboardIdentifier="CreditsViewController" title="Cast" id="l3y-PX-TfX" customClass="CreditsViewController" customModule="TMDB_demo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xVp-Ak-gK8">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ldR-g5-l5b">
-                                <rect key="frame" x="0.0" y="59" width="393" height="766.66666666666663"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="kLz-Zm-ped"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="ldR-g5-l5b" firstAttribute="top" secondItem="kLz-Zm-ped" secondAttribute="top" id="2tx-kx-Kun"/>
-                            <constraint firstItem="ldR-g5-l5b" firstAttribute="leading" secondItem="kLz-Zm-ped" secondAttribute="leading" id="DAI-ay-LGo"/>
-                            <constraint firstItem="ldR-g5-l5b" firstAttribute="height" secondItem="xVp-Ak-gK8" secondAttribute="height" multiplier="0.9" id="Yh6-s8-nQq"/>
-                            <constraint firstItem="kLz-Zm-ped" firstAttribute="trailing" secondItem="ldR-g5-l5b" secondAttribute="trailing" id="tUz-hx-uAW"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="creditsTableView" destination="ldR-g5-l5b" id="gaQ-Je-RES"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ycT-Ni-ZsH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2231" y="-756"/>
-        </scene>
-        <!--Reviews List View Controller-->
-        <scene sceneID="0Q3-do-oAJ">
-            <objects>
-                <viewController storyboardIdentifier="ReviewsListViewController" id="feB-I1-RG4" customClass="ReviewsListViewController" customModule="TMDB_demo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bXU-JH-902">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="GPM-cs-pr5">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="8yy-8o-xu2"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="GPM-cs-pr5" firstAttribute="leading" secondItem="8yy-8o-xu2" secondAttribute="leading" id="DPY-jR-3QV"/>
-                            <constraint firstItem="8yy-8o-xu2" firstAttribute="trailing" secondItem="GPM-cs-pr5" secondAttribute="trailing" id="eeB-gq-OFw"/>
-                            <constraint firstItem="GPM-cs-pr5" firstAttribute="top" secondItem="8yy-8o-xu2" secondAttribute="top" id="llh-Af-hnv"/>
-                            <constraint firstItem="8yy-8o-xu2" firstAttribute="bottom" secondItem="GPM-cs-pr5" secondAttribute="bottom" id="rRz-1C-hm2"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="tableView" destination="GPM-cs-pr5" id="zhy-0O-DLd"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8bE-2k-c7Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="859" y="-756"/>
-        </scene>
     </scenes>
-    <resources>
-        <systemColor name="groupTableViewBackgroundColor">
-            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>
