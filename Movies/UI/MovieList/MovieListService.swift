@@ -1,12 +1,8 @@
 import Foundation
 
 
-struct MoviesResponseObject: Decodable {
-    let results: [Movie]
-}
-
 protocol MovieListServiceProtocol {
-    func fetchMovies(withMovieTypeString: String, completion: @escaping (Result<MoviesResponseObject>) -> Void)
+    func fetchMovies(completion: @escaping (Result<MoviesResponseObject>) -> Void)
 }
 
 
@@ -18,8 +14,8 @@ class MovieListService: APIClient {
 }
 
 extension MovieListService: MovieListServiceProtocol {
-    func fetchMovies(withMovieTypeString str: String, completion: @escaping (Result<MoviesResponseObject>) -> Void) {
-        guard let url = URL(string: Constants.baseURL + "movie/\(str)") else {
+    func fetchMovies(completion: @escaping (Result<MoviesResponseObject>) -> Void) {
+        guard let url = URL(string: Constants.baseURL + "movie/\(Constants.movieTypeString)") else {
             completion(.failure)
             return
         }

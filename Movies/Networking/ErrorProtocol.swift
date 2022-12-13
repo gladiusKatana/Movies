@@ -19,7 +19,6 @@ extension ErrorReceivableDelegate where Self: UIViewController {
 }
 
 extension UIViewController {
-    
     func handleError(_ errorMessage: String) {
         let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -27,3 +26,4 @@ extension UIViewController {
         present(alert, animated: true)
     }
 }
+
