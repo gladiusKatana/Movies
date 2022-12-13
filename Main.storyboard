@@ -26,7 +26,7 @@
         <!--Movie List View Controller-->
         <scene sceneID="vNV-XI-XwJ">
             <objects>
-                <viewController storyboardIdentifier="MovieListViewController" id="BvU-Xi-hPV" customClass="MovieListViewController" customModule="TMDB_demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MovieListViewController" id="BvU-Xi-hPV" customClass="MovieListViewController" customModule="Movies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ovy-m0-9ys">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,7 +63,7 @@
         <!--Movie Detail View Controller-->
         <scene sceneID="Wff-Go-ZrC">
             <objects>
-                <viewController storyboardIdentifier="MovieDetailViewController" id="EcB-k1-hxq" customClass="MovieDetailViewController" customModule="TMDB_demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MovieDetailViewController" id="EcB-k1-hxq" customClass="MovieDetailViewController" customModule="Movies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5pq-PJ-uVh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="700"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
