@@ -1,4 +1,4 @@
-module Pods_Movies {
+framework module Pods_Movies {
   umbrella header "Pods-Movies-umbrella.h"
 
   export *

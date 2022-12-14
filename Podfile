@@ -4,7 +4,7 @@ platform :ios, '14.0'
 
 target 'Movies' do
   # Comment the next line if you don't want to use dynamic frameworks
-  # use_frameworks!
+  use_frameworks!
   pod 'Kingfisher', '= 4.10.1'
   pod 'Cosmos', '= 18.0.1'
 end
