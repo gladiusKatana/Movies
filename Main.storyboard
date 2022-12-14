@@ -89,7 +89,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6FR-vp-g7g" customClass="CosmosView" customModule="Cosmos">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6FR-vp-g7g" customClass="CosmosView" customModule="Cosmos">
                                                 <rect key="frame" x="20" y="344.66666666666669" width="120" height="0.0"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <userDefinedRuntimeAttributes>
@@ -151,6 +151,7 @@
                                             <constraint firstAttribute="trailing" secondItem="enU-Pg-cnb" secondAttribute="trailing" id="9kd-Wt-eiJ"/>
                                             <constraint firstItem="I0e-g3-4Pz" firstAttribute="leading" secondItem="0ps-gR-Z2I" secondAttribute="leading" id="CFI-a9-7Th"/>
                                             <constraint firstItem="enU-Pg-cnb" firstAttribute="leading" secondItem="0hy-M2-oUn" secondAttribute="leading" id="Ib5-ys-iVc"/>
+                                            <constraint firstItem="6FR-vp-g7g" firstAttribute="width" secondItem="0hy-M2-oUn" secondAttribute="width" multiplier="0.32" id="RSw-hl-b8T"/>
                                             <constraint firstItem="OgF-Fk-Ngs" firstAttribute="trailing" secondItem="0ps-gR-Z2I" secondAttribute="trailing" id="Si1-Tp-dng"/>
                                             <constraint firstItem="y7h-I2-9er" firstAttribute="leading" secondItem="0ps-gR-Z2I" secondAttribute="leading" id="TD3-9W-k2r"/>
                                             <constraint firstItem="HEc-kr-uxV" firstAttribute="centerX" secondItem="0hy-M2-oUn" secondAttribute="centerX" id="TuR-K4-r5m"/>
