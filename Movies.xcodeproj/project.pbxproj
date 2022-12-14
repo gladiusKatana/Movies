@@ -242,8 +242,8 @@
 			isa = PBXGroup;
 			children = (
 				9FC44A592948460600029B7B /* ErrorProtocol.swift */,
-				9FC44A5A2948460600029B7B /* APIClient.swift */,
 				9FC44A5B2948460600029B7B /* Result.swift */,
+				9FC44A5A2948460600029B7B /* APIClient.swift */,
 				9FC44A5C2948460600029B7B /* DecodingTask.swift */,
 			);
 			path = Networking;

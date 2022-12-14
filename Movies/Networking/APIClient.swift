@@ -29,16 +29,5 @@ extension APIClient {
         }
         task.resume()
     }
-    
-    func addApiKey(to request: inout URLRequest) {
-        guard let url = request.url,
-              var urlComponents = URLComponents(url: url, resolvingAgainstBaseURL: false) else { return }
-        
-        let accessKeyQueryItem = URLQueryItem(name: "api_key", value: Constants.apiKey)
-        urlComponents.queryItems = (urlComponents.queryItems ?? []) + [accessKeyQueryItem]
-        request.url = urlComponents.url
-        
-        //; print("\n\n\nREQUEST URL: \n\(request.url)")  // with API key ... watch out
-    }
 }
 
