@@ -169,8 +169,10 @@
                                     <constraint firstAttribute="bottom" secondItem="Sd3-Ze-Lcq" secondAttribute="bottom" constant="164" id="3nz-mY-8hd"/>
                                     <constraint firstAttribute="bottom" secondItem="0hy-M2-oUn" secondAttribute="bottom" id="BKf-rZ-9CB"/>
                                     <constraint firstItem="0hy-M2-oUn" firstAttribute="top" secondItem="kZG-Xu-rc7" secondAttribute="top" id="GI2-xK-NuW"/>
+                                    <constraint firstAttribute="bottom" secondItem="0hy-M2-oUn" secondAttribute="bottom" id="hQj-DW-yh0"/>
                                     <constraint firstAttribute="trailing" secondItem="0hy-M2-oUn" secondAttribute="trailing" id="mPC-7A-4VA"/>
                                     <constraint firstItem="0hy-M2-oUn" firstAttribute="leading" secondItem="kZG-Xu-rc7" secondAttribute="leading" id="r8R-Wn-G64"/>
+                                    <constraint firstItem="0hy-M2-oUn" firstAttribute="top" secondItem="kZG-Xu-rc7" secondAttribute="top" id="tCd-rj-P3Q"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
