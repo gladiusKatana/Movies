@@ -3,13 +3,9 @@
 
 enum Constants {
     
-    static let apiKey = "485fb80eb5476dc84b087c53f0b0e38b"
+    static let apiKey = "f1ac40e9a853849dc6b73bc766aae168" //v3 auth
     static let baseURL = "https://api.themoviedb.org/3/"
     static let imageBaseURL = "https://image.tmdb.org/t/p/original"
     static let movieTypeString = "now_playing"
     static let uiTitleString = "Now Playing Movies"
 }
-
-
-//https://api.themoviedb.org/3/movie/top_rated?api_key=485fb80eb5476dc84b087c53f0b0e38b
-//https://api.themoviedb.org/3/movie/now_playing?api_key=485fb80eb5476dc84b087c53f0b0e38b
