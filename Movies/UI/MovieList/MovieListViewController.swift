@@ -76,7 +76,7 @@ class MovieListViewController: UIViewController, ActivityIndicatorContainer, MCS
     
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
         let str = String(decoding: data, as: UTF8.self)
-        let message = "\nSomeone in your network suggested this movie:\n\n---------------------\n\(str)\n---------------------\n"
+        let message = "\nSomeone close to you suggested this movie:\n\n---------------------\n\(str)\n---------------------\n"
         print(message)
         
         let alert = UIAlertController(title: "Movie Suggestion!", message: message, preferredStyle: .alert)
