@@ -9,6 +9,7 @@ class MovieListViewController: UIViewController, ActivityIndicatorContainer, MCS
     
     var peerID: MCPeerID! /// The peer ID is simply the name of the current device, which is useful for identifying who is joining a session.
     var mcSession: MCSession!
+    var mcBrowser: MCBrowserViewController?
     var mcAdvertiserAssistant: MCAdvertiserAssistant!
     
     override func viewDidLoad() {
@@ -45,7 +46,8 @@ class MovieListViewController: UIViewController, ActivityIndicatorContainer, MCS
     }
 
     func joinSession(action: UIAlertAction!) {
-        let mcBrowser = MCBrowserViewController(serviceType: "hws-kb", session: mcSession)
+        mcBrowser = MCBrowserViewController(serviceType: "hws-kb", session: mcSession)
+        guard let mcBrowser = mcBrowser else { return }
         mcBrowser.delegate = self
         present(mcBrowser, animated: true)
     }
@@ -54,6 +56,9 @@ class MovieListViewController: UIViewController, ActivityIndicatorContainer, MCS
         switch state {
         case MCSessionState.connected:
             print("\nConnected: \(peerID.displayName)\n")
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { [weak self] in
+                self?.mcBrowser?.dismiss(animated: true)
+            }
 
         case MCSessionState.connecting:
             print("\nConnecting: \(peerID.displayName)")
@@ -89,8 +94,8 @@ class MovieListViewController: UIViewController, ActivityIndicatorContainer, MCS
                 fatalError()
             }
         }))
-        DispatchQueue.main.async { [unowned self] in
-            self.present(alert, animated: true, completion: nil)
+        DispatchQueue.main.async { [weak self] in
+            self?.present(alert, animated: true, completion: nil)
         }
     }
     
