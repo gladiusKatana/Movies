@@ -75,6 +75,23 @@ class MovieListViewController: UIViewController, ActivityIndicatorContainer, MCS
     }
     
     func session(_ session: MCSession, didReceive data: Data, fromPeer peerID: MCPeerID) {
+        let str = String(decoding: data, as: UTF8.self)
+        let message = "\n---------------------\nreceived string data: \(str)\n---------------------\n"
+        print(message)
+        
+        let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+            switch action.style {
+            case .default: print("\n\nalert-tapped-OK--default\n\n")
+            case .cancel: print("\n\nalert-tapped-OK--cancel\n\n")
+            case .destructive: print("\n\nalert-tapped-OK--destructive")
+            @unknown default:
+                fatalError()
+            }
+        }))
+        DispatchQueue.main.async { [unowned self] in
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     func session(_ session: MCSession, didReceive stream: InputStream, withName streamName: String, fromPeer peerID: MCPeerID) {

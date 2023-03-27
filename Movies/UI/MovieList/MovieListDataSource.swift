@@ -40,6 +40,18 @@ extension MovieListDataSource: UITableViewDelegate {
 
 extension MovieListViewController: MovieListDataSourceDelegate {
     func didSelectMovie(_ movie: Movie) {
+        
+        if mcSession.connectedPeers.count > 0 {
+            let data = Data(movie.title.utf8)
+            do {
+                try mcSession.send(data, toPeers: mcSession.connectedPeers, with: .reliable)
+            } catch let error as NSError {
+                let ac = UIAlertController(title: "Send error", message: error.localizedDescription, preferredStyle: .alert)
+                ac.addAction(UIAlertAction(title: "OK", style: .default))
+                present(ac, animated: true)
+            }
+        }
+        
         guard let vc = storyBoard.instantiateViewController(withIdentifier: "MovieDetailViewController") as? MovieDetailViewController else {
             return
         }
