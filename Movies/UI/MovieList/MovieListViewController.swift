@@ -22,7 +22,7 @@ class MovieListViewController: UIViewController, ActivityIndicatorContainer, MCS
         viewModel.serviceFetchMovies()
         
         peerID = MCPeerID(displayName: UIDevice.current.name)
-        mcSession = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: .optional)
+        mcSession = MCSession(peer: peerID, securityIdentity: nil, encryptionPreference: .required)
         mcSession.delegate = self
         
 //        let hostAction = UIAlertAction(title: "hosting session", style: .default)
